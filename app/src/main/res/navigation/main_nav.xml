@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav"
+    app:startDestination="@id/nav_catalog">
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="ru.bpproject.camestore.fragments.cart.CartFragment"
+        android:label="@string/Cart" />
+    <fragment
+        android:id="@+id/nav_catalog"
+        android:name="ru.bpproject.camestore.fragments.catalog.CatalogFragment"
+        android:label="@string/catalog" >
+        <action
+            android:id="@+id/action_catalog_to_product_list"
+            app:destination="@id/nav_product_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ru.bpproject.camestore.fragments.profile.ProfileFragment"
+        android:label="@string/profile" />
+    <fragment
+        android:id="@+id/nav_product_list"
+        android:name="ru.bpproject.camestore.fragments.productList.ProductListFragment"
+        android:label="@string/catalog" >
+        <action
+            android:id="@+id/action_nav_product_list_to_nav_catalog"
+            app:destination="@id/nav_catalog" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_nav_product_list_to_nav_product_item"
+            app:destination="@id/nav_product_item" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_product_item"
+        android:name="ru.bpproject.camestore.fragments.productItem.ProductItemFragment"
+        android:label="ProductItemFragment" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_nav_product_item_to_nav_product_list"
+            app:destination="@id/nav_product_list" />
+        <action
+            android:id="@id/action_nav_product_item_to_product_item"
+            app:destination="@id/nav_product_item"/>
+    </fragment>
+</navigation>

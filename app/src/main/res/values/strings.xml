@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Came Store</string>
+    <string name="profile">Profile</string>
+    <string name="catalog">Catalog</string>
+    <string name="Cart">Cart</string>
+    <string name="sales_amount">Sales amount</string>
+    <string name="add_to_basket">Add to basket</string>
+    <string name="functonality">Functonality</string>
+    <string name="accessories">Accessories</string>
+    <string name="to_cart">To cart</string>
+    <string name="retry">Retry</string>
+    <string name="unknown_error">Unknown Error</string>
+</resources>
